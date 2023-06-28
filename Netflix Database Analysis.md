@@ -1,15 +1,16 @@
-This project utilized data from the following Netflix dataset:CREATE TABLE netflix_titles_info
+# This project utilized data from the following Netflix dataset: 
+CREATE TABLE netflix_titles_info
 ("show_id" varchar(5), "type" varchar(7), "title" varchar(58), "country" varchar(74), "date_added" timestamp, "release_year" int, 
 "rating" varchar(5), "duration" varchar(9), "listed_in" varchar(74));
 
-In this project, I leveraged PostgreSQL to analyze the Netflix Titles dataset, exploring various aspects of the data through SQL queries. 
+## In this project, I leveraged PostgreSQL to analyze the Netflix Titles dataset, exploring various aspects of the data through SQL queries. 
 The dataset is broken down into two tables: netflix_titles_info and netflix_people.
 
 The netflix_titles_info table contains detailed information about the shows and movies available on Netflix, including the title,
 type (TV Show or Movie), release year, and the date the title was added to Netflix.
 The netflix_people table provides additional information about these titles, like the director associated with each show_id.
 
-A range of SQL functionalities were utilized, from basic SELECT statements to more complex JOIN operations and aggregate functions. 
+### A range of SQL functionalities were utilized, from basic SELECT statements to more complex JOIN operations and aggregate functions. 
 The findings from the project include:
 
 - Determining the total number of movie titles in the database, which came to a total of 8 movies.

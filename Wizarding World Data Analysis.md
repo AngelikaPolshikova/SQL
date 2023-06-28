@@ -1,17 +1,23 @@
-/* Wizarding World Data Analysis - Wizards and Their Patronuses
+# Wizarding World Data Analysis - Wizards and Their Patronuses
 This repository contains an SQL project that illustrates a whimsical exploration of the Wizarding World, revolving around its celebrities and their patronuses. The dataset presents a combination of fictional characters from popular literature, primarily the Harry Potter series, and aligns them with their professions and magical patronuses.
 
 Two main tables constitute the dataset in this project: celebrities_wizards and patronuses.
 
-Dataset Description
-The celebrities_wizards table contains information about popular characters from the Wizarding World, including their names and professions. Each character is assigned a unique id which serves as a primary key for the table.
+## Dataset Description
+The celebrities_wizards table contains information about popular characters from the Wizarding World, including their names and professions.
+Each character is assigned a unique id which serves as a primary key for the table.
 
-The patronuses table holds data on magical patronuses, which are protective entities conjured by wizards and witches. The id field in this table acts as a primary key, and it aligns with the id in the celebrities_wizards table, establishing a relationship between the two tables.
+The patronuses table holds data on magical patronuses, which are protective entities conjured by wizards and witches. 
+The id field in this table acts as a primary key, and it aligns with the id in the celebrities_wizards table, establishing a relationship 
+between the two tables.
 
-SQL Queries
-This project incorporates SQL queries that retrieve and join data from both tables. This way, we can correlate each character with their patronus. Note that not every character in the Wizarding World has a known patronus, and thus some fields in the patronuses table may be left null.
+### SQL Queries
+This project incorporates SQL queries that retrieve and join data from both tables. This way, we can correlate each character with their 
+patronus. Note that not every character in the Wizarding World has a known patronus, and thus some fields in the patronuses table may be 
+left null.
 
-Through these queries, we create an enjoyable mashup of the Wizarding World, observing the relationship between celebrities and their respective patronuses. This project demonstrates how SQL can be utilized for data analysis, even when exploring fictional universes.
+Through these queries, we create an enjoyable mashup of the Wizarding World, observing the relationship between celebrities and their 
+respective patronuses. This project demonstrates how SQL can be utilized for data analysis, even when exploring fictional universes.
 
 Feel free to clone the repository, run the queries, and immerse yourself in this magical data exploration!*/
 CREATE TABLE celebrities_wizards (

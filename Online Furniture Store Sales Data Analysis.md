@@ -1,4 +1,3 @@
-/*
 # Online Furniture Store Sales Data Analysis
 This repository contains an SQL project that focuses on analyzing sales data from an online furniture store. 
 The original dataset was collected by Charles B. from Khan Academy and contains transactional information about the sales,
@@ -7,13 +6,13 @@ including the transaction date, product details, payment details, and location d
 The data is stored in a SQL table named sales, which has fields including ID, transaction_date, product, price, payment_type, name, city, 
 state, country, account_created, last_login, latitude, and longitude.
 
-**Dataset Description**
+## Dataset Description**
 The sales table in this database represents transactions from an online furniture store. Each row in the table is a separate transaction, 
 which includes data such as the transaction date, product sold (e.g., chair, couch), payment type (e.g., Mastercard, Visa), customer name, 
 and geographical location details. Geographical details include the customer's city, state, and country, along with the latitude and 
 longitude of the transaction location.
 
-**SQL Queries**
+### SQL Queries**
 The analysis part of this project consists of various SQL queries that answer interesting business questions such as:
 
 What are the total sales per country?

@@ -93,3 +93,61 @@ FROM (<br>
   GROUP BY `orderID`<br>
   HAVING Total_Quantity > 2<br>
 ) subquery;<br>
+
+**7.Which locations in New York received at least 3 orders in January, and how many orders did they each receive?**
+| Location                              | Num_orders |
+| ------------------------------------- | ---------------- |
+| 148 Elm St, New York City, NY 10001   | 3                |
+| 515 Lincoln St, New York City, NY 10001| 3                |
+| 916 Pine St, New York City, NY 10001  | 3                |
+| 961 Jefferson St, New York City, NY 10001| 4              |
+
+SELECT location, COUNT(orderID) as num_orders<br>
+FROM BIT_DB.JanSales<br>
+WHERE location LIKE '%New York City, NY%'<br>
+GROUP BY location<br>
+HAVING COUNT(orderID) >= 3<br>
+
+**8.How many of each type of headphone were sold in February?**
+
+SELECT Product, SUM(Quantity) as total_sold<br>
+FROM BIT_DB.FebSales<br>
+WHERE Product LIKE '%headphones%'<br>
+GROUP BY Product<br>
+
+| Product               | Quantity Sold |
+| ---------------------------- | ------------- |
+| Apple Airpods Headphones     | 1013          |
+| Bose SoundSport Headphones   | 844           |
+| Wired Headphones             | 1282          |
+
+**9.What was the average amount spent per account in February?**
+
+Avegage per account: 190.00034676304287
+
+SELECT avg(quantity*price)<br>
+FROM BIT_DB.FebSales Feb<br>
+
+LEFT JOIN BIT_DB.customers cust<br>
+ON FEB.orderid=cust.order_id<br>
+
+WHERE length(orderid) = 6 <br>
+AND orderid <> 'Order ID'<br>
+
+**10. What was the average quantity of products purchased per account in February?**
+Average: 1
+SELECT sum(quantity)/count(cust.acctnum) <br>
+FROM BIT_DB.FebSales Feb <br>
+LEFT JOIN BIT_DB.customers cust <br>
+ON FEB.orderid=cust.order_id <br>
+
+WHERE length(orderid) = 6  <br>
+AND orderid <> 'Order ID' <br>
+
+**11.Which product brought in the most revenue in January and how much revenue did it bring in total?**
+Macbook Pro Laptop brought total revenue of 399500
+SELECT Product, SUM(Quantity * price) as Total_Revenue<br>
+FROM BIT_DB.JanSales<br>
+GROUP BY Product<br>
+ORDER BY Total_Revenue DESC<br>
+LIMIT 1<br>

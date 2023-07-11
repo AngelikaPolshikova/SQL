@@ -151,3 +151,18 @@ FROM BIT_DB.JanSales<br>
 GROUP BY Product<br>
 ORDER BY Total_Revenue DESC<br>
 LIMIT 1<br>
+
+**12. What is the average popularity of each artist based on the data in the 'SpotifyData' table? + Identify any artist who has an average popularity score of 90 or above. **
+
+WITH popularity_average_CTE AS (<br>v
+SELECT s.artist_name,<br>
+AVG(s.popularity) AS average_popularity<br>
+FROM SpotifyData s <br>
+GROUP BY s.artist_name<br>
+)<br>
+ 
+SELECT  artist_name,<br>
+        average_popularity,<br>
+        'Top Star' AS tag<br>
+FROM popularity_average_CTE<br>
+WHERE average_popularity>=90;<br>

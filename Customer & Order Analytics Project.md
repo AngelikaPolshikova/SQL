@@ -152,7 +152,7 @@ GROUP BY Product<br>
 ORDER BY Total_Revenue DESC<br>
 LIMIT 1<br>
 
-**12. What is the average popularity of each artist based on the data in the 'SpotifyData' table? + Identify any artist who has an average popularity score of 90 or above. **
+**12. What is the average popularity of each artist based on the data in the 'SpotifyData' table? + Identify any artist who has an average popularity score of 90 or above.**
 
 WITH popularity_average_CTE AS (<br>v
 SELECT s.artist_name,<br>
